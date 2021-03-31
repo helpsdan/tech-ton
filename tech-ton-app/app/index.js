@@ -1,10 +1,14 @@
 const serverless = require('serverless-http');
+const bodyParser = require('body-parser');
 const express = require('express')
 const app = express()
+const AWS = require('aws-sdk');
 
 const port = 3000
 
-app.get('/', (req, res) => {
+app.use(bodyParser.json({ strict: false }));
+
+app.get('/',  (req, res) => {
   res.send('Hello World!')
 })
 
