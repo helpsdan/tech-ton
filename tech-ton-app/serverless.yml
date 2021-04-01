@@ -38,10 +38,10 @@ functions:
     handler: index.handler
     events:
       - http: 'POST api/v1/user'
-  incremendAccessCount:
+  incrementAccessCount:
     handler: index.handler
     events:
-      - http: 'POST api/v1/access-count/{proxy+}'
+      - http: 'POST api/v1/access-count'
   getAccessCount:
     handler: index.handler
     events:
