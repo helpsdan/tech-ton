@@ -25,7 +25,7 @@ exports.createUser = (req, res) => {
       console.log(error);
       res.status(400).json({ error: 'Could not create user' });
     }
-    res.status(20).json({ userId, name });
+    res.status(201).json({ userId, name });
   });
 }
 
@@ -38,15 +38,15 @@ exports.getUser = (req, res) => {
       }
     
     dynamoDb.get(params, (error, result) => {
-    if (error) {
-        console.log(error);
-        res.status(400).json({ error: 'Could not get user' });
-    }
-    if (result.Item) {
-        const {userId, name} = result.Item;
-        res.status(200).json({ userId, name });
-    } else {
-        res.status(404).json({ error: "User not found" });
-    }
+      if (error) {
+          console.log(error);
+          res.status(400).json({ error: 'Could not get user' });
+      }
+      if (result.Item) {
+          const {userId, name} = result.Item;
+          res.status(200).json({ userId, name });
+      } else {
+          res.status(404).json({ error: "User not found" });
+      }
     });
 }
