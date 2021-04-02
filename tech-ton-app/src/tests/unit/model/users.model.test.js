@@ -1,10 +1,10 @@
-const UserModel = require("../../../model/users.model");
+const UserModel = require("../../../main/model/users.model");
 const httpMocks = require("node-mocks-http");
 const createUser = require("../../mock/create-user.json");
 const createUserNameNotString = require("../../mock/create-user-name-not-string.json");
 const createUserUserIdNotString = require("../../mock/create-user-user-id-not-string.json");
 
-jest.mock("../../../model/users.model");
+jest.mock("../../../main/model/users.model");
 
 let req, res
 const userId = "896fe8db-346e-4cbe-98b8-ee837872acda";

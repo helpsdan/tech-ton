@@ -1,9 +1,9 @@
-const UsersController = require("../../../controllers/users.controller");
-const UserModel = require("../../../model/users.model");
+const UsersController = require("../../../main/controllers/users.controller");
+const UserModel = require("../../../main/model/users.model");
 const httpMocks = require("node-mocks-http");
 const createUser = require("../../mock/create-user.json");
 
-jest.mock("../../../model/users.model")
+jest.mock("../../../main/model/users.model")
 
 let req, res
 const userId = "896fe8db-346e-4cbe-98b8-ee837872acda";

@@ -5,7 +5,7 @@ const app = express()
 const AWS = require('aws-sdk');
 AWS.config.update({region:'us-east-1'})
 
-const router = require("./routes/router")
+const router = require("./src/main/routes/router")
 app.use(bodyParser.json({ strict: false }));
 
 app.use(express.json());

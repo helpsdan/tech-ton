@@ -1,9 +1,9 @@
-const AccessCountModel = require("../../../model/access.count.model");
+const AccessCountModel = require("../../../main/model/access.count.model");
 const accessCount = require("../../mock/access-count.json");
 const httpMocks = require("node-mocks-http");
 const countapi = require('countapi-js');
 
-jest.mock("../../../model/access.count.model");
+jest.mock("../../../main/model/access.count.model");
 
 let req, res
 beforeEach(() => {
