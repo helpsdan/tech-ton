@@ -1,7 +1,9 @@
-const AccessCountModel = require("../../../model/access.count.model")
+const AccessCountModel = require("../../../model/access.count.model");
+const accessCount = require("../../mock/access-count.json");
 const httpMocks = require("node-mocks-http");
+const countapi = require('countapi-js');
 
-jest.mock("../../../model/access.count.model")
+jest.mock("../../../model/access.count.model");
 
 let req, res
 beforeEach(() => {
@@ -11,7 +13,7 @@ beforeEach(() => {
 
 describe("AccessCountModel.incrementAccessCount", () => {
     it("Should have a incrementAccessCount function", () =>{
-
+        expect(typeof AccessCountModel.incrementAccessCount).toBe("function");
     });
     it("Should return 201 and increment access count", () =>{
 
@@ -23,7 +25,7 @@ describe("AccessCountModel.incrementAccessCount", () => {
 
 describe("AccessCountModel.getAccessCount", () => {
     it("Should have a incrementAgetAccessCountccessCount function", () =>{
-
+        expect(typeof AccessCountModel.getAccessCount).toBe("function");
     });
     it("Should return 201 and get access count", () =>{
 
