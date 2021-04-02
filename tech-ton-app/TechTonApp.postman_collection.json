@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "eab1cf63-9c38-4d77-989b-7d579a312d12",
+		"name": "TechTonApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "access-count",
+			"item": [
+				{
+					"name": "IncrementAccessCount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{techTonApp}}/api/v1/access-count",
+							"host": [
+								"{{techTonApp}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"access-count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAccessCount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{techTonApp}}/api/v1/access-count",
+							"host": [
+								"{{techTonApp}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"access-count"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{techTonApp}}/api/v1/user/896fe8db-346e-4cbe-98b8-ee837872acda",
+							"host": [
+								"{{techTonApp}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"896fe8db-346e-4cbe-98b8-ee837872acda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"userId\": \"896fe8db-346e-4cbe-98b8-ee837872acda\",\n    \"name\": \"Daniel Aguiar Alves\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{techTonApp}}/api/v1/user",
+							"host": [
+								"{{techTonApp}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
