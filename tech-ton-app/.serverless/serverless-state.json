@@ -225,7 +225,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/tech-ton-app/dev/1617305658817-2021-04-01T19:34:18.817Z/tech-ton-app.zip"
+                "S3Key": "serverless/tech-ton-app/dev/1617403440384-2021-04-02T22:44:00.384Z/tech-ton-app.zip"
               },
               "Handler": "index.handler",
               "Runtime": "nodejs10.x",
@@ -255,7 +255,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/tech-ton-app/dev/1617305658817-2021-04-01T19:34:18.817Z/tech-ton-app.zip"
+                "S3Key": "serverless/tech-ton-app/dev/1617403440384-2021-04-02T22:44:00.384Z/tech-ton-app.zip"
               },
               "Handler": "index.handler",
               "Runtime": "nodejs10.x",
@@ -285,7 +285,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/tech-ton-app/dev/1617305658817-2021-04-01T19:34:18.817Z/tech-ton-app.zip"
+                "S3Key": "serverless/tech-ton-app/dev/1617403440384-2021-04-02T22:44:00.384Z/tech-ton-app.zip"
               },
               "Handler": "index.handler",
               "Runtime": "nodejs10.x",
@@ -315,7 +315,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/tech-ton-app/dev/1617305658817-2021-04-01T19:34:18.817Z/tech-ton-app.zip"
+                "S3Key": "serverless/tech-ton-app/dev/1617403440384-2021-04-02T22:44:00.384Z/tech-ton-app.zip"
               },
               "Handler": "index.handler",
               "Runtime": "nodejs10.x",
@@ -345,7 +345,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/tech-ton-app/dev/1617305658817-2021-04-01T19:34:18.817Z/tech-ton-app.zip"
+                "S3Key": "serverless/tech-ton-app/dev/1617403440384-2021-04-02T22:44:00.384Z/tech-ton-app.zip"
               },
               "Handler": "index.handler",
               "Runtime": "nodejs10.x",
@@ -368,54 +368,54 @@
               "GetAccessCountLogGroup"
             ]
           },
-          "GetUserLambdaVersioncS1sgVXWHJKg2I06oH62DNoCREUVtshfyZJ56eqxXCA": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "GetUserLambdaFunction"
-              },
-              "CodeSha256": "YZKPGOtDzDhyCXGX9mwAYJnHJ8MlayPXJmBtqShCRbo="
-            }
-          },
-          "CreateUserLambdaVersion9XIJMoBMCdg2qUADJQVZu3PcrLexjOJwavhoHiHJU": {
+          "CreateUserLambdaVersionnTPFQVD3kinRbI9oQpquK5Y0j9bhzbM0NOz2Rid4": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateUserLambdaFunction"
               },
-              "CodeSha256": "YZKPGOtDzDhyCXGX9mwAYJnHJ8MlayPXJmBtqShCRbo="
+              "CodeSha256": "HowghhzWaPQqiU1yKLB1nPEP3w4Zahm6NUmZQIvlJv8="
             }
           },
-          "IncrementAccessCountLambdaVersion5nhAJ15VzpHtqgEHCjOb91wvgiXyJscfI21L6Wu9OU": {
+          "GetUserLambdaVersionlSSLsg13P4LWSNX6VunHFCYtRURur4KkSATV7oeEJS4": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "GetUserLambdaFunction"
+              },
+              "CodeSha256": "HowghhzWaPQqiU1yKLB1nPEP3w4Zahm6NUmZQIvlJv8="
+            }
+          },
+          "IncrementAccessCountLambdaVersion39nRjq19IFrx9utnF3ZQeij1TukWGYQmyQOlxzYYHs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "IncrementAccessCountLambdaFunction"
               },
-              "CodeSha256": "YZKPGOtDzDhyCXGX9mwAYJnHJ8MlayPXJmBtqShCRbo="
+              "CodeSha256": "HowghhzWaPQqiU1yKLB1nPEP3w4Zahm6NUmZQIvlJv8="
             }
           },
-          "GetAccessCountLambdaVersionjCSqA0MavWB2bE6MVy6ymCN6e3jR8wKj6eibnCCsBhU": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "GetAccessCountLambdaFunction"
-              },
-              "CodeSha256": "YZKPGOtDzDhyCXGX9mwAYJnHJ8MlayPXJmBtqShCRbo="
-            }
-          },
-          "AppLambdaVersion8rxBHoJFyEO3UEt1lHI8RpmWHBEdTkSPDvvLIqWMZaU": {
+          "AppLambdaVersionrCaPjbX5MeQy7vo5Kld4OBGL4YsTUzglpAP6kvTc5A": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "YZKPGOtDzDhyCXGX9mwAYJnHJ8MlayPXJmBtqShCRbo="
+              "CodeSha256": "HowghhzWaPQqiU1yKLB1nPEP3w4Zahm6NUmZQIvlJv8="
+            }
+          },
+          "GetAccessCountLambdaVersionD7pq9Yzlj6t6xsRNr8daMIc0WGxCErHYtnowhASWwY": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "GetAccessCountLambdaFunction"
+              },
+              "CodeSha256": "HowghhzWaPQqiU1yKLB1nPEP3w4Zahm6NUmZQIvlJv8="
             }
           },
           "ApiGatewayRestApi": {
@@ -769,7 +769,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1617305645447": {
+          "ApiGatewayDeployment1617403423595": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1000,34 +1000,34 @@
               "Ref": "ServerlessDeploymentBucket"
             }
           },
-          "GetUserLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Ref": "GetUserLambdaVersioncS1sgVXWHJKg2I06oH62DNoCREUVtshfyZJ56eqxXCA"
-            }
-          },
           "CreateUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateUserLambdaVersion9XIJMoBMCdg2qUADJQVZu3PcrLexjOJwavhoHiHJU"
+              "Ref": "CreateUserLambdaVersionnTPFQVD3kinRbI9oQpquK5Y0j9bhzbM0NOz2Rid4"
+            }
+          },
+          "GetUserLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "GetUserLambdaVersionlSSLsg13P4LWSNX6VunHFCYtRURur4KkSATV7oeEJS4"
             }
           },
           "IncrementAccessCountLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "IncrementAccessCountLambdaVersion5nhAJ15VzpHtqgEHCjOb91wvgiXyJscfI21L6Wu9OU"
-            }
-          },
-          "GetAccessCountLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Ref": "GetAccessCountLambdaVersionjCSqA0MavWB2bE6MVy6ymCN6e3jR8wKj6eibnCCsBhU"
+              "Ref": "IncrementAccessCountLambdaVersion39nRjq19IFrx9utnF3ZQeij1TukWGYQmyQOlxzYYHs"
             }
           },
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersion8rxBHoJFyEO3UEt1lHI8RpmWHBEdTkSPDvvLIqWMZaU"
+              "Ref": "AppLambdaVersionrCaPjbX5MeQy7vo5Kld4OBGL4YsTUzglpAP6kvTc5A"
+            }
+          },
+          "GetAccessCountLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "GetAccessCountLambdaVersionD7pq9Yzlj6t6xsRNr8daMIc0WGxCErHYtnowhASWwY"
             }
           },
           "ServiceEndpoint": {
@@ -1140,7 +1140,20 @@
       "vpc": {}
     },
     "custom": {
-      "tableName": "users-table-dev"
+      "tableName": "users-table-dev",
+      "dynamodb": {
+        "stages": [
+          "dev"
+        ],
+        "start": {
+          "port": 8000,
+          "inMemory": true,
+          "migrate": true
+        },
+        "migration": {
+          "dir": "offline/migrations"
+        }
+      }
     },
     "plugins": [
       "serverless-openapi-documentation",
@@ -1165,7 +1178,7 @@
         "timeout": 6,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "AppLambdaVersion8rxBHoJFyEO3UEt1lHI8RpmWHBEdTkSPDvvLIqWMZaU"
+        "versionLogicalId": "AppLambdaVersionrCaPjbX5MeQy7vo5Kld4OBGL4YsTUzglpAP6kvTc5A"
       },
       "getUser": {
         "handler": "index.handler",
@@ -1180,7 +1193,7 @@
         "timeout": 6,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "GetUserLambdaVersioncS1sgVXWHJKg2I06oH62DNoCREUVtshfyZJ56eqxXCA"
+        "versionLogicalId": "GetUserLambdaVersionlSSLsg13P4LWSNX6VunHFCYtRURur4KkSATV7oeEJS4"
       },
       "createUser": {
         "handler": "index.handler",
@@ -1195,7 +1208,7 @@
         "timeout": 6,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "CreateUserLambdaVersion9XIJMoBMCdg2qUADJQVZu3PcrLexjOJwavhoHiHJU"
+        "versionLogicalId": "CreateUserLambdaVersionnTPFQVD3kinRbI9oQpquK5Y0j9bhzbM0NOz2Rid4"
       },
       "incrementAccessCount": {
         "handler": "index.handler",
@@ -1210,7 +1223,7 @@
         "timeout": 6,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "IncrementAccessCountLambdaVersion5nhAJ15VzpHtqgEHCjOb91wvgiXyJscfI21L6Wu9OU"
+        "versionLogicalId": "IncrementAccessCountLambdaVersion39nRjq19IFrx9utnF3ZQeij1TukWGYQmyQOlxzYYHs"
       },
       "getAccessCount": {
         "handler": "index.handler",
@@ -1225,7 +1238,7 @@
         "timeout": 6,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "GetAccessCountLambdaVersionjCSqA0MavWB2bE6MVy6ymCN6e3jR8wKj6eibnCCsBhU"
+        "versionLogicalId": "GetAccessCountLambdaVersionD7pq9Yzlj6t6xsRNr8daMIc0WGxCErHYtnowhASWwY"
       }
     },
     "resources": {
@@ -1282,7 +1295,7 @@
     "artifact": "/home/daniel/dev/daniel/tech-ton/tech-ton-app/.serverless/tech-ton-app.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/tech-ton-app/dev/1617305658817-2021-04-01T19:34:18.817Z",
+    "artifactDirectoryName": "serverless/tech-ton-app/dev/1617403440384-2021-04-02T22:44:00.384Z",
     "artifact": "tech-ton-app.zip"
   }
 }
