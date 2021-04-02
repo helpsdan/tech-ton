@@ -14,7 +14,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{techTonApp}}/api/v1/access-count",
+							"raw": "{{techTonAppDev}}/api/v1/access-count",
 							"host": [
 								"{{techTonApp}}"
 							],
@@ -33,7 +33,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{techTonApp}}/api/v1/access-count",
+							"raw": "{{techTonAppDev}}/api/v1/access-count",
 							"host": [
 								"{{techTonApp}}"
 							],
