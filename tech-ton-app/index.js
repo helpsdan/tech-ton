@@ -16,8 +16,6 @@ app.get('/', (req, res) => {
   res.json('<H1>Tech Ton APP on air!</H1>')
 })
 
-app.listen(3000, () => {
-  console.log("Tech Ton APP is now running!");
-})
+module.exports = app;
 
 module.exports.handler = serverless(app);

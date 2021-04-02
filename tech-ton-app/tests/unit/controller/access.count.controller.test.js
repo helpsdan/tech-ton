@@ -1,5 +1,6 @@
-const AccessCountController = require("../../../controllers/access.count.controller")
-const AccessCountModel = require("../../../model/access.count.model")
+const AccessCountController = require("../../../controllers/access.count.controller");
+const AccessCountModel = require("../../../model/access.count.model");
+const accessCount = require("../../mock/access-count.json");
 const httpMocks = require("node-mocks-http");
 
 jest.mock("../../../model/access.count.model")
@@ -12,30 +13,32 @@ beforeEach(() => {
 
 describe("AccessCountController.incrementAccessCount", () => {
     it("Should have a incrementAccessCount function", () =>{
-
+        expect(typeof AccessCountController.incrementAccessCount).toBe("function");
     });
-    it("Should call incrementAccessCount", () =>{
-
+    it("Should call incrementAccessCount", async () =>{
+        await AccessCountController.incrementAccessCount(req, res);
+        expect(AccessCountModel.incrementAccessCount).toBeCalled();
     });
-    it("Should return 201 and increment access count", () =>{
-
-    });
-    it("Should handle 'Could not increment access count' and return 400", () =>{
-
+    it("Should increment access count", async () =>{
+        AccessCountModel.incrementAccessCount.mockReturnValue(accessCount);
+        await AccessCountController.incrementAccessCount(req, res);
+        expect(res.statusCode).toBe(201)
+        expect(res._isEndCalled).toBeTruthy()
     });
 })
 
 describe("AccessCountController.getAccessCount", () => {
     it("Should have a incrementAgetAccessCountccessCount function", () =>{
-
+        expect(typeof AccessCountController.getAccessCount).toBe("function");
     });
-    it("Should call getAccessCount", () =>{
-
+    it("Should call getAccessCount", async () =>{
+        await AccessCountController.getAccessCount(req, res);
+        expect(AccessCountModel.getAccessCount).toBeCalled();
     });
-    it("Should return 201 and get access count", () =>{
-
-    });
-    it("Should handle 'Could not get access count' and return 400", () =>{
-
+    it("Should get access count", async () =>{
+        AccessCountModel.getAccessCount.mockReturnValue(accessCount);
+        await AccessCountController.getAccessCount(req, res);
+        expect(res.statusCode).toBe(200)
+        expect(res._isEndCalled).toBeTruthy()
     });
 })

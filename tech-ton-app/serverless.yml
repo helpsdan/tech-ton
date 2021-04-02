@@ -4,6 +4,15 @@ service: tech-ton-app
 
 custom:
   tableName: 'users-table-${self:provider.stage}'
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+    migration:
+      dir: offline/migrations
 
 provider:
   name: aws
@@ -53,12 +62,10 @@ resources:
       Type: 'AWS::DynamoDB::Table'
       Properties:
         AttributeDefinitions:
-          -
-            AttributeName: userId
+          - AttributeName: userId
             AttributeType: S
         KeySchema:
-          -
-            AttributeName: userId
+          - AttributeName: userId
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1

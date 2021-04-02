@@ -1,9 +1,7 @@
-const UsersController = require("../../../controllers/users.controller")
-const UserModel = require("../../../model/users.model")
+const UsersController = require("../../../controllers/users.controller");
+const UserModel = require("../../../model/users.model");
 const httpMocks = require("node-mocks-http");
 const createUser = require("../../mock/create-user.json");
-const createUserNameNotString = require("../../mock/create-user-name-not-string.json");
-const createUserUserIdNotString = require("../../mock/create-user-user-id-not-string.json");
 
 jest.mock("../../../model/users.model")
 
@@ -16,36 +14,32 @@ beforeEach(() => {
 
 describe("UsersController.createUser", () => {
     it("Should have a createUser function", () =>{
-
+        expect(typeof UsersController.createUser).toBe("function");
     });
     it("Should call createUser", () =>{
-
+        UsersController.createUser(req, res);
+        expect(UserModel.createUser).toBeCalled();
     });
-    it("Should handle 'userId must be a string' and return 400", async () =>{
-
-    });
-    it("Should handle 'name must be a string' and return 400", () =>{
-
-    });
-    it("Should handle 'could not create user' and return 400", () =>{
-
+    it("Should create user", () =>{
+        UserModel.createUser.mockReturnValue(createUser);
+        UsersController.createUser(req, res);
+        expect(res.statusCode).toBe(201)
+        expect(res._isEndCalled).toBeTruthy()
     });
 })
 
 describe("UsersController.getUser", () => {
     it("Should have a getUser function", () =>{
-
+        expect(typeof UsersController.getUser).toBe("function");
     });
     it("Should call getUser", () =>{
-
+        UsersController.getUser(req, res);
+        expect(UserModel.getUser).toBeCalled();
     });
-    it("Should return 200 and get user", () =>{
-
-    });
-    it("Should handle 'user not found' and return 404", () =>{
-
-    });
-    it("Should handle 'could not create user' and return 400", () =>{
-
+    it("Should get user", () =>{
+        UserModel.getUser.mockReturnValue(createUser);
+        UsersController.getUser(req, res);
+        expect(res.statusCode).toBe(200)
+        expect(res._isEndCalled).toBeTruthy()
     });
 })
