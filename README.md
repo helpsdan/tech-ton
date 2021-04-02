@@ -23,7 +23,7 @@ Após a instalação, importe a collection: **TechTonApp.postman_collection.json
 
 # Arquitetura
 
-<img src="https://github.com/helpsdan/tech-ton/tech-ton-app/assets/TechTonAppArchitecture.jpeg">
+<img src="https://github.com/helpsdan/tech-ton/blob/master/tech-ton-app/assets/TechTonAppArchitecture.jpeg">
 
 ---
 
