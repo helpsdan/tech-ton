@@ -89,10 +89,10 @@
         "LogGroupName": "/aws/lambda/tech-ton-app-dev-createUser"
       }
     },
-    "IncremendAccessCountLogGroup": {
+    "IncrementAccessCountLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/tech-ton-app-dev-incremendAccessCount"
+        "LogGroupName": "/aws/lambda/tech-ton-app-dev-incrementAccessCount"
       }
     },
     "GetAccessCountLogGroup": {
@@ -204,7 +204,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/tech-ton-app/dev/1617204326176-2021-03-31T15:25:26.176Z/tech-ton-app.zip"
+          "S3Key": "serverless/tech-ton-app/dev/1617481956726-2021-04-03T20:32:36.726Z/tech-ton-app.zip"
         },
         "Handler": "index.handler",
         "Runtime": "nodejs10.x",
@@ -234,7 +234,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/tech-ton-app/dev/1617204326176-2021-03-31T15:25:26.176Z/tech-ton-app.zip"
+          "S3Key": "serverless/tech-ton-app/dev/1617481956726-2021-04-03T20:32:36.726Z/tech-ton-app.zip"
         },
         "Handler": "index.handler",
         "Runtime": "nodejs10.x",
@@ -264,7 +264,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/tech-ton-app/dev/1617204326176-2021-03-31T15:25:26.176Z/tech-ton-app.zip"
+          "S3Key": "serverless/tech-ton-app/dev/1617481956726-2021-04-03T20:32:36.726Z/tech-ton-app.zip"
         },
         "Handler": "index.handler",
         "Runtime": "nodejs10.x",
@@ -287,18 +287,18 @@
         "CreateUserLogGroup"
       ]
     },
-    "IncremendAccessCountLambdaFunction": {
+    "IncrementAccessCountLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/tech-ton-app/dev/1617204326176-2021-03-31T15:25:26.176Z/tech-ton-app.zip"
+          "S3Key": "serverless/tech-ton-app/dev/1617481956726-2021-04-03T20:32:36.726Z/tech-ton-app.zip"
         },
         "Handler": "index.handler",
         "Runtime": "nodejs10.x",
-        "FunctionName": "tech-ton-app-dev-incremendAccessCount",
+        "FunctionName": "tech-ton-app-dev-incrementAccessCount",
         "MemorySize": 1024,
         "Timeout": 6,
         "Environment": {
@@ -314,7 +314,7 @@
         }
       },
       "DependsOn": [
-        "IncremendAccessCountLogGroup"
+        "IncrementAccessCountLogGroup"
       ]
     },
     "GetAccessCountLambdaFunction": {
@@ -324,7 +324,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/tech-ton-app/dev/1617204326176-2021-03-31T15:25:26.176Z/tech-ton-app.zip"
+          "S3Key": "serverless/tech-ton-app/dev/1617481956726-2021-04-03T20:32:36.726Z/tech-ton-app.zip"
         },
         "Handler": "index.handler",
         "Runtime": "nodejs10.x",
@@ -347,54 +347,54 @@
         "GetAccessCountLogGroup"
       ]
     },
-    "AppLambdaVersion66sc5qCIh6dLeKTKr10Ca4LV77OKLFswNa0wGU": {
+    "AppLambdaVersion0ieobPGXBrlqsB7KPZCTlfDefef4ZjzfRYHFqkusQzw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppLambdaFunction"
         },
-        "CodeSha256": "FknXUls8aLTR7sWkxXFt+I/V+Fqd2Q3mEyodqvGfzbI="
+        "CodeSha256": "NH8mRKa5q0877/vdvaRPjw75JSZNp1ANcFnciFxiGt8="
       }
     },
-    "GetUserLambdaVersionSfFnIEYmvZG3JoESoSd7hGrmGSokhyxkjHQ8CCivw": {
+    "IncrementAccessCountLambdaVersionk0SOlbSKQHdwyqltl2UD2K8Ch1oehoS6uUI321bkw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
-          "Ref": "GetUserLambdaFunction"
+          "Ref": "IncrementAccessCountLambdaFunction"
         },
-        "CodeSha256": "FknXUls8aLTR7sWkxXFt+I/V+Fqd2Q3mEyodqvGfzbI="
+        "CodeSha256": "NH8mRKa5q0877/vdvaRPjw75JSZNp1ANcFnciFxiGt8="
       }
     },
-    "CreateUserLambdaVersionLC2RfSgBWK5i5i8GRYpHjtwyvQaq7M9LlpGnN7bc68": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "CreateUserLambdaFunction"
-        },
-        "CodeSha256": "FknXUls8aLTR7sWkxXFt+I/V+Fqd2Q3mEyodqvGfzbI="
-      }
-    },
-    "IncremendAccessCountLambdaVersionhJtq5A40VYHwXPrFStgdU8UgyWCNqUapPXgl8VWlO8": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "IncremendAccessCountLambdaFunction"
-        },
-        "CodeSha256": "FknXUls8aLTR7sWkxXFt+I/V+Fqd2Q3mEyodqvGfzbI="
-      }
-    },
-    "GetAccessCountLambdaVersionrFW6w5xpAdx18IkW6LMufDlE4EDeR5yqkAXJOjlFs": {
+    "GetAccessCountLambdaVersioneAn2nb9Aoykl7evkeXMJ2Lrlm6FmBbSj4pBsS5Qfkw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAccessCountLambdaFunction"
         },
-        "CodeSha256": "FknXUls8aLTR7sWkxXFt+I/V+Fqd2Q3mEyodqvGfzbI="
+        "CodeSha256": "NH8mRKa5q0877/vdvaRPjw75JSZNp1ANcFnciFxiGt8="
+      }
+    },
+    "GetUserLambdaVersion43iNWNdFbwF2X3rA84lpUWiZJ58sevbrPzp0353sn0": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetUserLambdaFunction"
+        },
+        "CodeSha256": "NH8mRKa5q0877/vdvaRPjw75JSZNp1ANcFnciFxiGt8="
+      }
+    },
+    "CreateUserLambdaVersionPfqczSiWjN0Nq4e1eXdX1Q8qXzmF0Rh2RwOVP8emuc": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "CreateUserLambdaFunction"
+        },
+        "CodeSha256": "NH8mRKa5q0877/vdvaRPjw75JSZNp1ANcFnciFxiGt8="
       }
     },
     "ApiGatewayRestApi": {
@@ -482,18 +482,6 @@
           "Ref": "ApiGatewayResourceApiV1"
         },
         "PathPart": "access-count",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      }
-    },
-    "ApiGatewayResourceApiV1AccessDashcountProxyVar": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceApiV1AccessDashcount"
-        },
-        "PathPart": "{proxy+}",
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         }
@@ -674,13 +662,13 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayMethodApiV1AccessDashcountProxyVarPost": {
+    "ApiGatewayMethodApiV1AccessDashcountPost": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
         "HttpMethod": "POST",
         "RequestParameters": {},
         "ResourceId": {
-          "Ref": "ApiGatewayResourceApiV1AccessDashcountProxyVar"
+          "Ref": "ApiGatewayResourceApiV1AccessDashcount"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
@@ -705,7 +693,7 @@
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "IncremendAccessCountLambdaFunction",
+                    "IncrementAccessCountLambdaFunction",
                     "Arn"
                   ]
                 },
@@ -760,7 +748,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1617204316348": {
+    "ApiGatewayDeployment1617481942826": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -773,7 +761,7 @@
         "ApiGatewayMethodProxyVarAny",
         "ApiGatewayMethodApiV1UserProxyVarGet",
         "ApiGatewayMethodApiV1UserPost",
-        "ApiGatewayMethodApiV1AccessDashcountProxyVarPost",
+        "ApiGatewayMethodApiV1AccessDashcountPost",
         "ApiGatewayMethodApiV1AccessDashcountGet"
       ]
     },
@@ -888,12 +876,12 @@
         }
       }
     },
-    "IncremendAccessCountLambdaPermissionApiGateway": {
+    "IncrementAccessCountLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
           "Fn::GetAtt": [
-            "IncremendAccessCountLambdaFunction",
+            "IncrementAccessCountLambdaFunction",
             "Arn"
           ]
         },
@@ -994,31 +982,31 @@
     "AppLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppLambdaVersion66sc5qCIh6dLeKTKr10Ca4LV77OKLFswNa0wGU"
+        "Ref": "AppLambdaVersion0ieobPGXBrlqsB7KPZCTlfDefef4ZjzfRYHFqkusQzw"
       }
     },
-    "GetUserLambdaFunctionQualifiedArn": {
+    "IncrementAccessCountLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetUserLambdaVersionSfFnIEYmvZG3JoESoSd7hGrmGSokhyxkjHQ8CCivw"
-      }
-    },
-    "CreateUserLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "CreateUserLambdaVersionLC2RfSgBWK5i5i8GRYpHjtwyvQaq7M9LlpGnN7bc68"
-      }
-    },
-    "IncremendAccessCountLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "IncremendAccessCountLambdaVersionhJtq5A40VYHwXPrFStgdU8UgyWCNqUapPXgl8VWlO8"
+        "Ref": "IncrementAccessCountLambdaVersionk0SOlbSKQHdwyqltl2UD2K8Ch1oehoS6uUI321bkw"
       }
     },
     "GetAccessCountLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAccessCountLambdaVersionrFW6w5xpAdx18IkW6LMufDlE4EDeR5yqkAXJOjlFs"
+        "Ref": "GetAccessCountLambdaVersioneAn2nb9Aoykl7evkeXMJ2Lrlm6FmBbSj4pBsS5Qfkw"
+      }
+    },
+    "GetUserLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetUserLambdaVersion43iNWNdFbwF2X3rA84lpUWiZJ58sevbrPzp0353sn0"
+      }
+    },
+    "CreateUserLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "CreateUserLambdaVersionPfqczSiWjN0Nq4e1eXdX1Q8qXzmF0Rh2RwOVP8emuc"
       }
     },
     "ServiceEndpoint": {
