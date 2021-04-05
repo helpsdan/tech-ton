@@ -13,6 +13,11 @@ custom:
       migrate: true
     migration:
       dir: offline/migrations
+  documentation:
+    version: 'v1'
+    title: 'Tech Ton App'
+    description: 'This is Tech Ton App'
+    models: {}
 
 provider:
   name: aws

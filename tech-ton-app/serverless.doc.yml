@@ -1,0 +1,109 @@
+custom:
+  documentation: ${file(serverless.doc.yml):documentation}
+
+functions:
+  createUser:
+    handler: "handler.createUser"
+    events:
+      - http:
+        path: "createUser"
+        method: "post"
+        documentation:
+          summary: "Create User"
+          description: "Creates a user"
+          requestBody:
+            description: "A user information object"
+          requestModels:
+            application/json: "PutDocumentRequest"
+          methodResponses:
+            - statusCode: 201
+              responseBody:
+                description: "A created user object"
+              responseModels:
+                application/json: "User"
+            - statusCode: 400
+              responseBody:
+                description: "userId must be a string"
+              responseModels:
+                application/json: "ErrorResponse"
+            - statusCode: 400
+              responseBody:
+                description: "name must be a string"
+              responseModels:
+                application/json: "ErrorResponse"
+            - statusCode: 400
+              responseBody:
+                description: "Could not create user"
+              responseModels:
+                application/json: "ErrorResponse"
+  getUser:
+    handler: "handler.getUser"
+    events:
+      - http:
+        path: "getUser"
+        method: "post"
+        documentation:
+          summary: "Get User"
+          description: "Get user"
+          pathParams:
+            - name: "userId"
+              description: "The userId for a user to get"
+              schema:
+                type: "string"
+                pattern: "^[-a-z0-9_]+$"
+          methodResponses:
+            - statusCode: 200
+              responseBody:
+                description: "A user object"
+              responseModels:
+                application/json: "User"
+            - statusCode: 404
+              responseBody:
+                description: "User not found"
+              responseModels:
+                application/json: "ErrorResponse"
+            - statusCode: 400
+              responseBody:
+                description: "Could not get user"
+              responseModels:
+                application/json: "ErrorResponse"
+  incrementAccessCount:
+    handler: "handler.incrementAccessCount"
+    events:
+      - http:
+        path: "incrementAccessCount"
+        method: "post"
+        documentation:
+          summary: "Increment Access Count"
+          description: "Increment Access Count"
+          methodResponses:
+            - statusCode: 201
+              responseBody:
+                description: "Access Count"
+              responseModels:
+                application/json: "Access Count"
+            - statusCode: 400
+              responseBody:
+                description: "Could not increment access count"
+              responseModels:
+                application/json: "ErrorResponse"
+  getAccessCount:
+    handler: "handler.getAccessCount"
+    events:
+      - http:
+        path: "getAccessCount"
+        method: "post"
+        documentation:
+          summary: "Get Access Count"
+          description: "Get Access Count"
+          methodResponses:
+            - statusCode: 200
+              responseBody:
+                description: "Access Count"
+              responseModels:
+                application/json: "Access Count"
+            - statusCode: 400
+              responseBody:
+                description: "Could not increment access count"
+              responseModels:
+                application/json: "ErrorResponse"
